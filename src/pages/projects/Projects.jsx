@@ -15,76 +15,18 @@ const Projects = () => {
   const [vlogs_projects, setVlogs_Projects] = useState([
     {
       id : 1,
-      type : 'vlog',
-      page : 1,
-      title : "Server Improvement"
-    },
-    {
-      id : 2,
-      type : 'vlog',
-      page : 1,
-      title : "Server Improvement"
-    },
-    {
-      id : 3,
       type : 'project',
       page : 1,
-      title : "Server Improvement"
+      title : "Bazaarwale",
+      imgUrl : 'maxebels-banner.webp',
+      date : '12-04-2025',
+      url : 'https://bazaarwale.netlify.app/',
+      gitUrl : 'https://github.com/AnuragSingh8090/BazaarWale',
+      techStack : ['React.js', 'Node.js', 'Express.js', 'Nodemailer', 'Tailwind', 'Redux-toolkit'],
+      description : 'BazaarWale is a modern e-commerce web application built with React and Vite, designed to provide users with a seamless online shopping experience. It features responsive product browsing, intuitive UI/UX, and a scalable frontend architecture for showcasing and purchasing products efficiently across devices.'
+
     },
-    {
-      id : 4,
-      type : 'vlog',
-      page : 1,
-      title : "Server Improvement"
-    },
-    {
-      id : 5,
-      type : 'project',
-      page : 1,
-      title : "Server Improvement"
-    },
-    {
-      id : 6,
-      type : 'project',
-      page : 1,
-      title : "Server Improvement"
-    },
-    {
-      id : 7,
-      type : 'vlog',
-      page : 2,
-      title : "Server Improvement"
-    },
-    {
-      id : 8,
-      type : 'project',
-      page : 2,
-      title : "Server Improvement"
-    },
-    {
-      id : 9,
-      type : 'vlog',
-      page : 2,
-      title : "Server Improvement"
-    },
-    {
-      id : 10,
-      type : 'vlog',
-      page : 2,
-      title : "Server Improvement"
-    },
-    {
-      id : 11,
-      type : 'vlog',
-      page : 2,
-      title : "Server Improvement"
-    },
-    {
-      id : 12,
-      type : 'project',
-      page : 2,
-      title : "Server Improvement"
-    },
+
   ])
   const pageLength = vlogs_projects.length / 6;
 
@@ -101,7 +43,7 @@ const Projects = () => {
       <div className="shrink-0">
           <div className="flex items-center gap-3 text-[1.2vw] text-[#9f9fa8]">
             <h3 className="text-[22px] lg:text-[2.4vw] text-[#fff] font-[600] leading-none text-shadow-2xl">
-              Blogs / Projects
+              Projects
             </h3>{" "}
             <span className="text-[22px] h-[22px] w-[22px] lg:text-[1.8vw] lg:w-[2.2vw] lg:h-[2.2vw] text-white transition-all duration-300 projectBounce">
               <HiOutlineDocumentText />
@@ -155,7 +97,7 @@ const Projects = () => {
         <div className=" w-full flex items-center justify-center select-none ">
             <div className="flex gap-3 lg:gap-[1vw] items-center  text-[#bbbbbb] text-[35px] lg:text-[2vw]">
             <TiArrowLeft className={`${pageNumber <= 1 ? 'disabled' :''} cursor-pointer active:scale-[0.9] hover:text-[#64f196] transition-all duration-300`} onClick={decreasePage}/>
-            <span className="font-[500] text-[20px] lg:text-[1.4vw] mt-[0.4vw] flex items-center justify-center">{pageNumber} / {pageLength}</span>
+            <span className="font-[500] text-[20px] lg:text-[1.4vw] mt-[0.4vw] flex items-center justify-center">{pageNumber} / {Math.ceil(pageLength)}</span>
             <TiArrowRight className={`${pageNumber >= pageLength ? 'disabled' :''} cursor-pointer active:scale-[0.9] hover:text-[#64f196] transition-all duration-300`} onClick={increasePage} />
             </div>
         </div>
