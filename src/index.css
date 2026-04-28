@@ -1,0 +1,145 @@
+
+@import "tailwindcss";
+*{
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}
+
+body{
+  background-color: #040714;
+  background-color: #000000;
+  color: #fff;
+  font-family: "League Spartan", sans-serif;
+}
+
+.backImage {
+  background-image: linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+  background-size: 3.2vw 3.2vw;
+  opacity: 1;
+}
+
+.disabled{
+  filter: brightness(0.4);
+  pointer-events: none;
+}
+
+.disableDrag {
+  img {
+    user-select: none;       
+    -webkit-user-drag: none; 
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;   
+    /* pointer-events: none;    */
+  }
+}
+
+.navlinkContainer .active{
+  border-color: #64f196;
+  color: #64f196;
+}
+
+.projectBounce {
+  animation: projectBounce 2s ease-in-out infinite;
+}
+
+@keyframes projectBounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-15px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+
+
+
+
+.emailShake {
+  animation: emailShake 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes emailShake {
+from{
+  transform: rotate(30deg);
+}
+to{
+  transform: rotate(-30deg);
+}
+
+}
+
+
+.handShake {
+  animation: shake 1s ease-in-out infinite alternate;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+
+.pageAnimation {
+  animation: pageAnimation 0.5s ease-in-out forwards;
+  transform-origin: calc(100% - 60px) 20px;
+  opacity: 0; 
+}
+
+@keyframes pageAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0.4;
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+.pageAnimationReverse {
+  animation: pageAnimationReverse 0.6s ease-in-out forwards;
+  transform-origin: calc(100% - 60px) 20px;
+  opacity: 1;
+}
+
+@keyframes pageAnimationReverse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0.4;
+    border-radius: 50%;
+  }
+}

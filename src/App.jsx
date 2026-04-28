@@ -1,0 +1,23 @@
+import React from 'react'
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/homepage/Home';
+import Projects from './pages/projects/Projects';
+import Navbar from './components/navbar/Navbar';
+import Contact from './pages/contact/Contact';
+const App = () => {
+  return (
+    <>
+      <div className='h-screen w-screen lg:fixed lg:top-0  lg:left-0 lg:flex lg:justify-center lg:items-center  backImage'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </div>
+      <Navbar />
+    </>
+
+  )
+}
+
+export default App

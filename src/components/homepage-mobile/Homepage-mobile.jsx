@@ -1,0 +1,115 @@
+import { Link } from "react-router-dom";
+import Skills from "../../components/skills/Skills";
+import { LiaFileDownloadSolid } from "react-icons/lia";
+import { PiUserList } from "react-icons/pi";
+
+const Homepage_mobile = () => {
+    return (
+        <div className="lg:hidden mainContainer pb-[60px] py-3 px-3  lg:pb-0 w-full pageAnimation" >
+
+            <header className="bg-[#111a16] sticky z-[99]  top-0 left-0 py-4 rounded-lg mb-3">
+                <div className="flex items-center flex-row-reverse justify-center w-full gap-3 text-[1.2vw] text-[#9f9fa8]">
+                    <span className="text-[27px] text-[#63ef95]  transition-all duration-300 userPulse">
+                        <PiUserList className="mb-[3px]" />
+                    </span>
+                    <h3 className="text-[22px] lg:text-[2.4vw] text-[#fff] font-[600] leading-none text-shadow-2xl">
+                        My Profile
+                    </h3>{" "}
+                </div>
+            </header>
+
+            <div className="bg-[#111a16]  w-full h-full rounded-lg justify-between p-3  flex gap-3 sm:gap-8 overflow-hidden">
+                <div className="h-[57vw] max-h-[290px] max-w-[230px] shrink-0 w-[48vw] rounded-xl maskImage disableDrag cursor-pointer " >
+                    <img src="/Usman.webp" alt="" className="w-full h-full object-cover rounded-xl  grayscale hover:grayscale-[none] active:grayscale-[none] transition-all duration-700" />
+                </div>
+
+                <div className="py-2 grow-1 flex flex-col gap-1 justify-between">
+                    <p className="text-[14px] sm:text-[18px] leading-[28px] text-[#9f9fa8]">Hi, I am <span className=" text-[#fff] text-[28px] sm:text-[35px] mx-2 font-[500]">Sasta Hacker</span> <span className="text-[20px] sm:text-[25px] inline-flex  handShake">👋</span></p>
+                    <p className=" text-[14px] sm:text-[18px] leading-[18px] text-[#9f9fa8]">Full Stack Developer in <span className="text-[#64f196]">Softtech Private Limited</span></p>
+                    <Link to='/contact' className="h-[15%] sm:h-[20%] relative w-full overflow-hidden bg-[#18181b] border-[1px] border-[#27272a] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300 ">
+                        <p className="text-[10.5px] sm:text-[16px] text-[#d5d5d5] font-[400] text-center p-2  uppercase h-[calc(100%-2px)] w-[calc(100%-2px)]  rounded-lg  bg-[#18181b] z-3 flex items-center justify-center">Let's Work Together</p>
+                        <div className="w-[calc(100%-30px)] h-[10%] absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                            <div className="w-[2vw] h-[10%]  absolute top-[50%] translate-y-[-50%] left-2 rotate-box2 "></div>
+                        </div>
+                    </Link>
+
+                    <a to='/contact' download className="h-[15%] sm:h-[20%] relative w-full overflow-hidden bg-[#18181b] border-[1px] border-[#27272a] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300 ">
+                        <p className="text-[10.5px] sm:text-[16px] text-[#63ef95] font-[400] text-center p-2  uppercase h-[calc(100%-2px)] w-[calc(100%-2px)]  rounded-lg  bg-[#18181b] z-3 flex gap-1 items-center justify-center">
+                            <LiaFileDownloadSolid className="mb-1 text-[14px]" />
+                            Download Resume</p>
+                        <div className="w-[calc(100%-30px)] h-[10%] absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                            <div className="w-[2vw] h-[10%]  absolute top-[50%] translate-y-[-50%] left-2 rotate-box3 "></div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <main className="mt-3 py-2 px-3 bg-[#111111] border-[1px] flex flex-col gap-3 border-[#27272a] rounded-lg">
+                <p className="text-[15px] sm:text-[18px] sm:font-[300] sm:leading-[21px] leading-[18px] text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aut officia atque voluptatibus natus culpa deserunt? Cupiditate laborum odio quam repellendus possimus ab accusantium, neque atque iure commodi reiciendis? Quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem Lorem lorem lorem as d dfsaf Fuga aut officia atque voluptatibus natus culpa deserunt? Cupiditate laborum odio quam repellendus possimus ab accusantium, neque atque iure commodi reiciendis? Quae.
+                </p>
+
+                <div className="flex flex-col py-2 sm:flex-row gap-3 ">
+                    <div className="w-full sm:w-1/3 bg-[#27272a] rounded-lg flex flex-col justify-between sm:justify-start gap-3 px-4 py-4 hover:scale-[101%] border-[1px] border-[#27272a] hover:border-[#63f094] transition-scale duration-200 cursor-pointer">
+                        <p className="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-terminal w-5 h-5 mr-2 text-purple-400"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg>
+                            <span className="text-[#c085fd] text-[15px]">Skills</span>
+                        </p>
+                        <p className="text-[17px] sm:text-[19px] sm:leading-[24px] leading-[19px] text-[#dfdfdf]">Building responsive UIs with React, Next.js, and React Native.</p>
+                    </div>
+
+                    <div className="w-full sm:w-1/3 bg-[#27272a] rounded-lg flex flex-col justify-between sm:justify-start gap-3 px-4 py-4 hover:scale-[101%] border-[1px] border-[#27272a] hover:border-[#63f094] transition-scale duration-200 cursor-pointer">
+                        <p className="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-plane-takeoff w-5 h-5 mr-2 text-green-500"><path d="M2 22h20"></path><path d="M6.36 17.4 4 17l-2-4 1.1-.55a2 2 0 0 1 1.8 0l.17.1a2 2 0 0 0 1.8 0L8 12 5 6l.9-.45a2 2 0 0 1 2.09.2l4.02 3a2 2 0 0 0 2.1.2l4.19-2.06a2.41 2.41 0 0 1 1.73-.17L21 7a1.4 1.4 0 0 1 .87 1.99l-.38.76c-.23.46-.6.84-1.07 1.08L7.58 17.2a2 2 0 0 1-1.22.18Z"></path></svg>
+                            <span className="text-[#2fc65e] text-[15px]">Hobbies</span>
+                        </p>
+                        <p className="text-[17px] sm:text-[19px] sm:leading-[24px] leading-[19px] text-[#dfdfdf]">Dominating in Tekken or scoring goals in FIFA. ⚽🎮</p>
+                    </div>
+
+                    <div className="w-full sm:w-1/3  bg-[#27272a] rounded-lg flex flex-col justify-between sm:justify-start gap-3 px-4 py-4 hover:scale-[101%] border-[1px] border-[#27272a] hover:border-[#63f094] transition-scale duration-200 cursor-pointer">
+                        <p className="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-rocket w-5 h-5 mr-2 text-blue-400"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+                            <span className="text-[#5fa1f4] text-[15px]">Goal</span>
+                        </p>
+                        <p className="text-[17px] sm:text-[19px] sm:leading-[24px] leading-[19px] text-[#dfdfdf]">Let's team up and create something amazing together. 🚀</p>
+                    </div>
+
+                </div>
+
+                <p className="text-[16px] mt-2 mx-1 italic text-[#b5b5b9] font-[300]">P.S. I'm not really &nbsp;<span className="bg-[#ca8a02] text-black py-[3px] px-[6px] rounded-[4px]">Batman</span>&nbsp;, but I might be the &nbsp;<span className="bg-[#ea580b] text-black py-[3px] px-[6px] rounded-[4px]">hero</span>&nbsp; your project needs! 🦸‍♂️</p>
+
+            </main>
+
+            <section className="my-3 ">
+                <Skills />
+            </section>
+
+            <section className="mb-3 w-full bg-[#18181b] px-3 py-2  flex  flex-col border-[1px] gap-3 border-[#27272a] rounded-lg">
+                <p className="text-[#26a946] text-[18px] flex gap-2 " ><span>root/admin/amit_yadav.js</span> <span className="mt-[2px]  inline-block">{'%>'}</span></p>
+
+                <div className="text-[17px] tracking-wide">
+                    <span className="text-[#a2a2ab] flex items-center gap-2">const <span className="text-[#ab65f1]">profile</span> <span className="mt-1">{'='}</span> <span className="mb-[2px]">{'{'}</span> </span>
+                    <div className="ms-5">
+                        <p className="text-[#d4d4d8]">name : <span className="text-[#64f196]">"Amit Yadav"</span>,</p>
+                        <p className="text-[#d4d4d8]">passion : <span className="text-[#64f196]">"Crafting Digital Experiences"</span>,</p>
+                        <p className="text-[#d4d4d8]">objective : <span className="text-[#64f196]">"Exploring the World of Code"</span>,</p>
+                        <p className="text-[#d4d4d8]">expertise : <span className="text-[#64f196]">"Full Stack Developer ✨"</span>,</p>
+                        <p className="text-[#d4d4d8]">status : <span className="text-[#64f196]">"Building the Next Big Thing"</span>,</p>
+                        <p className="text-[#d4d4d8]">experience : <span className="text-[#64f196]">"2 Years"</span>,</p>
+                    </div>
+                    <span className="text-[#a2a2ab] ">{'}'} </span>
+                </div>
+
+                <div className="text-[17px] tracking-wide">
+                    <span className="text-[#a2a2ab] flex items-center gap-2">const <span className="text-[#ab65f1]">create_amazing</span> <span className="mt-1">{'='}</span> <span >{'( )'}</span> <span>{'{'}</span> </span>
+                    <p className="text-[#d4d4d8] ms-5">return <span className="text-[#64f196]">"Innovating with Code"</span></p>
+                    <span className="text-[#a2a2ab] ">{'}'} </span>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+export default Homepage_mobile;

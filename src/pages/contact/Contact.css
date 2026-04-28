@@ -1,0 +1,12 @@
+.shadowAnimation{
+    animation: swipe-right 2s linear infinite;
+}
+
+@keyframes swipe-right {
+    from{
+        left: -45%;
+    }
+    to{
+        left:145%
+    }
+}
