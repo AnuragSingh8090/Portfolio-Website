@@ -59,7 +59,7 @@ const Home = () => {
           <div className="h-[63%] w-full  flex justify-between gap-4">
             <div className="h-full w-[22%]  flex flex-col justify-between gap-4">
               <div className="h-[80%] w-full rounded-xl maskImage disableDrag cursor-pointer " >
-                <img src="/Usman.webp" alt="" className="w-full h-full object-cover rounded-xl  grayscale hover:grayscale-[none] active:grayscale-[none] transition-all duration-700" />
+                <img src="/profile-image.webp" alt="" className="w-full h-full object-cover rounded-xl  grayscale hover:grayscale-[none] active:grayscale-[none] transition-all duration-700" />
               </div>
               <Link to='/contact' className="h-[15%] relative w-full overflow-hidden bg-[#18181b] border-[1px] border-[#27272a] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300 ">
                 <p className="text-[1.1vw] text-[#d5d5d5] font-[400] text-center p-2  uppercase h-[calc(100%-2px)] w-[calc(100%-2px)]  rounded-lg  bg-[#18181b] z-3 flex items-center justify-center">Let's Work Together</p>
