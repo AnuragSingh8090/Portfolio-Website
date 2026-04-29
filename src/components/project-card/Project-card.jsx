@@ -2,7 +2,6 @@ import './Project-card.css'
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { TiArrowRight } from "react-icons/ti";
-import { Link } from 'react-router-dom';
 
 
 export const Vlog_card = () => {
@@ -31,11 +30,36 @@ export const Vlog_card = () => {
     )
 }
 export const Project_card = ({data}) => {
+    const handleTitleClick = (e) => {
+        e.preventDefault();
+        if (data.websiteUrl) {
+            window.open(data.websiteUrl, '_blank');
+        }
+    };
+
+    const handleGithubClick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (data.githubUrl) {
+            window.open(data.githubUrl, '_blank');
+        }
+    };
 
     return (
-        <Link to={data.url} target='_blank' className={`h-[210px] w-full md:w-[48%] lg:h-[30vh] lg:w-[31%] border border-[#27272a] flex flex-col shadow-white-light rounded-lg bg-[#18181b] scaleup-animation overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[101%] hover:border-[#64f196] group`}>
+        <div className={`h-[210px] w-full md:w-[48%] lg:h-[30vh] lg:w-[31%] border border-[#27272a] flex flex-col shadow-white-light rounded-lg bg-[#18181b] scaleup-animation overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[101%] hover:border-[#64f196] group`}>
             <div className="header w-full h-[17%]  bg-[#27272a] px-[3%] py-[1%] flex items-center justify-between text-[#d4d4d8] text-[18px] lg:text-[1.25vw]">
-                <div className='flex items-center gap-2 lg:gap-[0.6vw] w-[70%] group-hover:text-[#64f196]'><FaGithub className='mb-[0.3vw]' /><p className='line-clamp-1'>{data.title || "Project Title"}</p>  <FaExternalLinkAlt className=' mb-[0.2vw] text-[12px] lg:text-[1vw]' /></div>
+                <div 
+                    className='flex items-center gap-2 lg:gap-[0.6vw] w-[70%] group-hover:text-[#64f196] cursor-pointer'
+                    onClick={handleTitleClick}
+                >
+                    <FaGithub 
+                        className='mb-[0.3vw] hover:scale-110 transition-transform duration-200' 
+                        onClick={handleGithubClick}
+                        title="View on GitHub"
+                    />
+                    <p className='line-clamp-1' title="Visit Website">{data.title || "Project Title"}</p>  
+                    <FaExternalLinkAlt className=' mb-[0.2vw] text-[12px] lg:text-[1vw]' />
+                </div>
                 <div className=' text-[#7c7c7c] text-[14px] lg:text-[1vw] flex items-center justify-center'>{data.date || '00-00-0000'}</div>
             </div>
             <main className='grow-1 mx-[0.5vw] my-[0.4vw]   rounded-md overflow-hidden relative '>
@@ -46,9 +70,9 @@ export const Project_card = ({data}) => {
                       </p>
 
                     <div className='flex gap-2 lg:gap-[0.5vw] items-center w-full overflow-scroll'>
-                    { data.techStack.map((elem, index) =>{
+                    { data.techStack?.map((elem, index) =>{
           return (
-              <div title='elem.name' key={index} className="h-[30px] w-[33px] lg:h-[2.7vw] p-[7px] lg:w-[2.9vw] border-[1px] border-[#1b3f0d] bg-[#a0a0a05c] rounded-lg shrink-0">
+              <div title={elem.name} key={index} className="h-[30px] w-[33px] lg:h-[2.7vw] p-[7px] lg:w-[2.9vw] border-[1px] border-[#1b3f0d] bg-[#a0a0a05c] rounded-lg shrink-0">
                 {elem.svg}
               </div>
           )
@@ -57,7 +81,7 @@ export const Project_card = ({data}) => {
                 </div>
             </main>
 
-        </Link>
+        </div>
 
     )
 }
