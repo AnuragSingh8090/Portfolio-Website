@@ -4,9 +4,11 @@ import Home from './pages/homepage/Home';
 import Projects from './pages/projects/Projects';
 import Navbar from './components/navbar/Navbar';
 import Contact from './pages/contact/Contact';
+import { ThemeProvider } from './contexts/ThemeContext';
+
 const App = () => {
   return (
-    <>
+    <ThemeProvider>
       <div className='h-screen w-screen lg:fixed lg:top-0  lg:left-0 lg:flex lg:justify-center lg:items-center  backImage'>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -15,8 +17,7 @@ const App = () => {
         </Routes>
       </div>
       <Navbar />
-    </>
-
+    </ThemeProvider>
   )
 }
 

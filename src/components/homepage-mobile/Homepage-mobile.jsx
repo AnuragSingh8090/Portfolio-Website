@@ -9,18 +9,18 @@ const Homepage_mobile = () => {
 
     return (
         <div className="mainContainer pb-[60px] py-3 px-3 lg:pb-0 w-full pageAnimation">
-            <header className="bg-[#111a16] sticky z-[99] top-0 left-0 py-4 rounded-lg mb-3">
-                <div className="flex items-center flex-row-reverse justify-center w-full gap-3 text-[1.2vw] text-[#9f9fa8]">
-                    <span className="text-[27px] text-[#63ef95] transition-all duration-300 userPulse">
+            <header className="bg-[var(--bg-tertiary)] sticky z-[99] top-0 left-0 py-4 rounded-lg mb-3">
+                <div className="flex items-center flex-row-reverse justify-center w-full gap-3 text-[1.2vw] text-[var(--text-muted)]">
+                    <span className="text-[27px] text-[var(--accent-secondary)] transition-all duration-300 userPulse">
                         <PiUserList className="mb-[3px]" />
                     </span>
-                    <h3 className="text-[22px] lg:text-[2.4vw] text-[#fff] font-[600] leading-none text-shadow-2xl">
+                    <h3 className="text-[22px] lg:text-[2.4vw] text-[var(--text-primary)] font-[600] leading-none text-shadow-2xl">
                         My Profile
                     </h3>
                 </div>
             </header>
 
-            <div className="bg-[#111a16] w-full h-full rounded-lg justify-between p-3 flex flex-col items-center justify-center gap-3 min-[500px]:flex-row min-[500px]:gap-8 overflow-hidden">
+            <div className="bg-[var(--bg-tertiary)] w-full h-full rounded-lg justify-between p-3 flex flex-col items-center justify-center gap-3 min-[500px]:flex-row min-[500px]:gap-8 overflow-hidden">
                 <div className="h-[57vw] max-h-[290px] shrink-0 max-w-none w-auto min-[500px]:w-[48vw] min-[500px]:max-w-[230px] rounded-xl maskImage disableDrag cursor-pointer">
                     <img 
                         src={personal.profileImage.mobile} 
@@ -30,19 +30,19 @@ const Homepage_mobile = () => {
                 </div>
 
                 <div className="py-2 grow-1 flex flex-col gap-1 justify-between">
-                    <p className="text-[14px] sm:text-[18px] leading-[28px] text-[#9f9fa8]">
+                    <p className="text-[14px] sm:text-[18px] leading-[28px] text-[var(--text-muted)]">
                         Hi, I am 
-                        <span className="text-[#fff] text-[28px] sm:text-[35px] mx-2 font-[500]">
+                        <span className="text-[var(--text-primary)] text-[28px] sm:text-[35px] mx-2 font-[500]">
                             {personal.mobileDisplayName}
                         </span> 
                         <span className="text-[20px] sm:text-[25px] inline-flex handShake">👋</span>
                     </p>
-                    <p className="text-[14px] sm:text-[18px] leading-[18px] text-[#9f9fa8]">
-                        {intro.mobile} <span className="text-[#64f196]">{personal.company}</span>
+                    <p className="text-[14px] sm:text-[18px] leading-[18px] text-[var(--text-muted)]">
+                        {intro.mobile} <span className="text-[var(--accent-primary)]">{personal.company}</span>
                     </p>
                     
-                    <Link to='/contact' className="h-[15%] sm:h-[20%] relative w-full overflow-hidden bg-[#18181b] border-[1px] border-[#27272a] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300">
-                        <p className="text-[10.5px] sm:text-[16px] text-[#d5d5d5] font-[400] text-center p-2 uppercase h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg bg-[#18181b] z-3 flex items-center justify-center">
+                    <Link to='/contact' className="h-[15%] sm:h-[20%] relative w-full overflow-hidden bg-[var(--bg-card)] border-[1px] border-[var(--border-primary)] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300">
+                        <p className="text-[10.5px] sm:text-[16px] text-[var(--text-secondary)] font-[400] text-center p-2 uppercase h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg bg-[var(--bg-card)] z-3 flex items-center justify-center">
                             {cta.text}
                         </p>
                         <div className="w-[calc(100%-30px)] h-[10%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
@@ -50,8 +50,8 @@ const Homepage_mobile = () => {
                         </div>
                     </Link>
 
-                    <a href={resume.filename} download className="h-[15%] sm:h-[20%] relative w-full overflow-hidden bg-[#18181b] border-[1px] border-[#27272a] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300">
-                        <p className="text-[10.5px] sm:text-[16px] text-[#63ef95] font-[400] text-center p-2 uppercase h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg bg-[#18181b] z-3 flex gap-1 items-center justify-center">
+                    <a href={resume.filename} download className="h-[15%] sm:h-[20%] relative w-full overflow-hidden bg-[var(--bg-card)] border-[1px] border-[var(--border-primary)] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300">
+                        <p className="text-[10.5px] sm:text-[16px] text-[var(--accent-secondary)] font-[400] text-center p-2 uppercase h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg bg-[var(--bg-card)] z-3 flex gap-1 items-center justify-center">
                             <LiaFileDownloadSolid className="mb-1 text-[14px]" />
                             {resume.text}
                         </p>
@@ -62,13 +62,13 @@ const Homepage_mobile = () => {
                 </div>
             </div>
 
-            <main className="mt-3 py-2 px-3 bg-[#111111] border-[1px] flex flex-col gap-3 border-[#27272a] rounded-lg">
-                <p className="text-[15px] sm:text-[18px] sm:font-[300] sm:leading-[21px] leading-[18px] text-justify">
+            <main className="mt-3 py-2 px-3 bg-[var(--bg-secondary)] border-[1px] flex flex-col gap-3 border-[var(--border-primary)] rounded-lg">
+                <p className="text-[15px] sm:text-[18px] sm:font-[300] sm:leading-[21px] leading-[18px] text-justify text-[var(--text-primary)]">
                     {description.mobile}
                 </p>
 
                 <div className="flex flex-col py-2 sm:flex-row gap-3">
-                    <div className="w-full sm:w-1/3 bg-[#27272a] rounded-lg flex flex-col justify-between sm:justify-start gap-3 px-4 py-4 hover:scale-[101%] border-[1px] border-[#27272a] hover:border-[#63f094] transition-scale duration-200 cursor-pointer">
+                    <div className="w-full sm:w-1/3 bg-[var(--border-primary)] rounded-lg flex flex-col justify-between sm:justify-start gap-3 px-4 py-4 hover:scale-[101%] border-[1px] border-[var(--border-primary)] hover:border-[var(--accent-secondary)] transition-scale duration-200 cursor-pointer">
                         <p className="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-terminal w-5 h-5 mr-2 text-purple-400">
                                 <polyline points="4 17 10 11 4 5"></polyline>
@@ -76,12 +76,12 @@ const Homepage_mobile = () => {
                             </svg>
                             <span className="text-[#c085fd] text-[15px]">{cards.skills.title}</span>
                         </p>
-                        <p className="text-[17px] sm:text-[19px] sm:leading-[24px] leading-[19px] text-[#dfdfdf]">
+                        <p className="text-[17px] sm:text-[19px] sm:leading-[24px] leading-[19px] text-[var(--text-secondary)]">
                             {cards.skills.description.mobile}
                         </p>
                     </div>
 
-                    <div className="w-full sm:w-1/3 bg-[#27272a] rounded-lg flex flex-col justify-between sm:justify-start gap-3 px-4 py-4 hover:scale-[101%] border-[1px] border-[#27272a] hover:border-[#63f094] transition-scale duration-200 cursor-pointer">
+                    <div className="w-full sm:w-1/3 bg-[var(--border-primary)] rounded-lg flex flex-col justify-between sm:justify-start gap-3 px-4 py-4 hover:scale-[101%] border-[1px] border-[var(--border-primary)] hover:border-[var(--accent-secondary)] transition-scale duration-200 cursor-pointer">
                         <p className="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-plane-takeoff w-5 h-5 mr-2 text-green-500">
                                 <path d="M2 22h20"></path>
@@ -89,12 +89,12 @@ const Homepage_mobile = () => {
                             </svg>
                             <span className="text-[#2fc65e] text-[15px]">{cards.hobbies.title}</span>
                         </p>
-                        <p className="text-[17px] sm:text-[19px] sm:leading-[24px] leading-[19px] text-[#dfdfdf]">
+                        <p className="text-[17px] sm:text-[19px] sm:leading-[24px] leading-[19px] text-[var(--text-secondary)]">
                             {cards.hobbies.description.mobile}
                         </p>
                     </div>
 
-                    <div className="w-full sm:w-1/3 bg-[#27272a] rounded-lg flex flex-col justify-between sm:justify-start gap-3 px-4 py-4 hover:scale-[101%] border-[1px] border-[#27272a] hover:border-[#63f094] transition-scale duration-200 cursor-pointer">
+                    <div className="w-full sm:w-1/3 bg-[var(--border-primary)] rounded-lg flex flex-col justify-between sm:justify-start gap-3 px-4 py-4 hover:scale-[101%] border-[1px] border-[var(--border-primary)] hover:border-[var(--accent-secondary)] transition-scale duration-200 cursor-pointer">
                         <p className="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-rocket w-5 h-5 mr-2 text-blue-400">
                                 <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
@@ -104,13 +104,13 @@ const Homepage_mobile = () => {
                             </svg>
                             <span className="text-[#5fa1f4] text-[15px]">{cards.goal.title}</span>
                         </p>
-                        <p className="text-[17px] sm:text-[19px] sm:leading-[24px] leading-[19px] text-[#dfdfdf]">
+                        <p className="text-[17px] sm:text-[19px] sm:leading-[24px] leading-[19px] text-[var(--text-secondary)]">
                             {cards.goal.description}
                         </p>
                     </div>
                 </div>
 
-                <p className="text-[16px] mt-2 mx-1 italic text-[#b5b5b9] font-[300]">
+                <p className="text-[16px] mt-2 mx-1 italic text-[var(--text-muted)] font-[300]">
                     {footer.text}&nbsp;
                     <span className="bg-[#ca8a02] text-black py-[3px] px-[6px] rounded-[4px]">{footer.batman}</span>
                     &nbsp;{footer.butText}&nbsp;
@@ -123,38 +123,38 @@ const Homepage_mobile = () => {
                 <Skills />
             </section>
 
-            <section className="mb-3 w-full bg-[#18181b] px-3 py-2 flex flex-col border-[1px] gap-3 border-[#27272a] rounded-lg">
-                <p className="text-[#26a946] text-[18px] flex gap-2">
+            <section className="mb-3 w-full bg-[var(--bg-card)] px-3 py-2 flex flex-col border-[1px] gap-3 border-[var(--border-primary)] rounded-lg">
+                <p className="text-[var(--accent-secondary)] text-[18px] flex gap-2">
                     <span>root/admin/amit_yadav.js</span> 
                     <span className="mt-[2px] inline-block">{'%>'}</span>
                 </p>
 
                 <div className="text-[17px] tracking-wide">
-                    <span className="text-[#a2a2ab] flex items-center gap-2">
+                    <span className="text-[var(--text-muted)] flex items-center gap-2">
                         const <span className="text-[#ab65f1]">profile</span> 
                         <span className="mt-1">{'='}</span> 
                         <span className="mb-[2px]">{'{'}</span> 
                     </span>
                     <div className="ms-5">
-                        <p className="text-[#d4d4d8]">name : <span className="text-[#64f196]">"{codeProfile.name}"</span>,</p>
-                        <p className="text-[#d4d4d8]">passion : <span className="text-[#64f196]">"{codeProfile.passion}"</span>,</p>
-                        <p className="text-[#d4d4d8]">objective : <span className="text-[#64f196]">"{codeProfile.objective}"</span>,</p>
-                        <p className="text-[#d4d4d8]">expertise : <span className="text-[#64f196]">"{codeProfile.expertise}"</span>,</p>
-                        <p className="text-[#d4d4d8]">status : <span className="text-[#64f196]">"{codeProfile.status}"</span>,</p>
-                        <p className="text-[#d4d4d8]">experience : <span className="text-[#64f196]">"{codeProfile.experience}"</span>,</p>
+                        <p className="text-[var(--text-secondary)]">name : <span className="text-[var(--accent-primary)]">"{codeProfile.name}"</span>,</p>
+                        <p className="text-[var(--text-secondary)]">passion : <span className="text-[var(--accent-primary)]">"{codeProfile.passion}"</span>,</p>
+                        <p className="text-[var(--text-secondary)]">objective : <span className="text-[var(--accent-primary)]">"{codeProfile.objective}"</span>,</p>
+                        <p className="text-[var(--text-secondary)]">expertise : <span className="text-[var(--accent-primary)]">"{codeProfile.expertise}"</span>,</p>
+                        <p className="text-[var(--text-secondary)]">status : <span className="text-[var(--accent-primary)]">"{codeProfile.status}"</span>,</p>
+                        <p className="text-[var(--text-secondary)]">experience : <span className="text-[var(--accent-primary)]">"{codeProfile.experience}"</span>,</p>
                     </div>
-                    <span className="text-[#a2a2ab]">{'}'} </span>
+                    <span className="text-[var(--text-muted)]">{'}'} </span>
                 </div>
 
                 <div className="text-[17px] tracking-wide">
-                    <span className="text-[#a2a2ab] flex items-center gap-2">
+                    <span className="text-[var(--text-muted)] flex items-center gap-2">
                         const <span className="text-[#ab65f1]">{codeFunction.name}</span> 
                         <span className="mt-1">{'='}</span> 
                         <span>{'( )'}</span> 
                         <span>{'{'}</span> 
                     </span>
-                    <p className="text-[#d4d4d8] ms-5">return <span className="text-[#64f196]">"{codeFunction.return}"</span></p>
-                    <span className="text-[#a2a2ab]">{'}'} </span>
+                    <p className="text-[var(--text-secondary)] ms-5">return <span className="text-[var(--accent-primary)]">"{codeFunction.return}"</span></p>
+                    <span className="text-[var(--text-muted)]">{'}'} </span>
                 </div>
             </section>
         </div>

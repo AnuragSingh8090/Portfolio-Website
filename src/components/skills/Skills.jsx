@@ -35,8 +35,8 @@ const Skills = () => {
   ];
 
   return (
-    <div className="h-max py-3 lg:h-[14%] w-full bg-[#18181b] border-[1px] border-[#27272a] gap-3 px-3 lg:px-6 lg:py-2 flex  lg:items-center flex-col lg:flex-row justify-between rounded-lg  lg:rounded-xl">
-      <div className="h-full w-max shrink-0 text-[#e3e3e3] text-[18px] lg:text-[1.3vw] font-[600] flex items-center justify-center">
+    <div className="h-max py-3 lg:h-[14%] w-full bg-[var(--bg-card)] border-[1px] border-[var(--border-primary)] gap-3 px-3 lg:px-6 lg:py-2 flex  lg:items-center flex-col lg:flex-row justify-between rounded-lg  lg:rounded-xl">
+      <div className="h-full w-max shrink-0 text-[var(--text-secondary)] text-[18px] lg:text-[1.3vw] font-[600] flex items-center justify-center">
         Skills
       </div>
       <div className="h-full  w-full  flex items-center overflow-x-hidden  ">
@@ -45,7 +45,7 @@ const Skills = () => {
             return (
               <div title={elem.name}
                 key={elem.id + index}
-                className="h-[58px] w-[58px] lg:h-[4vw] p-3 lg:w-[4vw] border-[1px] border-[#27272a]  rounded-lg shrink-0"
+                className="h-[58px] w-[58px] lg:h-[4vw] p-3 lg:w-[4vw] border-[1px] border-[var(--border-primary)]  rounded-lg shrink-0"
               >
                 {elem.svg}
               </div>
@@ -55,7 +55,7 @@ const Skills = () => {
             return (
               <div title={elem.name}
                 key={elem.id * index}
-                className="h-[58px] w-[58px] lg:h-[4vw] p-3 lg:w-[4vw] border-[1px] border-[#27272a]  rounded-lg shrink-0"
+                className="h-[58px] w-[58px] lg:h-[4vw] p-3 lg:w-[4vw] border-[1px] border-[var(--border-primary)]  rounded-lg shrink-0"
               >
                 {elem.svg}
               </div>
@@ -65,14 +65,12 @@ const Skills = () => {
             return (
               <div title={elem.name}
                 key={elem.id * index + 3}
-                className="h-[58px] w-[58px] lg:h-[4vw] p-3 lg:w-[4vw] border-[1px] border-[#27272a]  rounded-lg shrink-0"
+                className="h-[58px] w-[58px] lg:h-[4vw] p-3 lg:w-[4vw] border-[1px] border-[var(--border-primary)]  rounded-lg shrink-0"
               >
                 {elem.svg}
               </div>
             );  
           })}
-
-
         </div>
       </div>
     </div>

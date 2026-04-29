@@ -1,5 +1,67 @@
 
 @import "tailwindcss";
+
+/* CSS Variables for Theme System */
+:root {
+  /* Dark Theme (Default) */
+  --bg-primary: #000000;
+  --bg-secondary: #111111;
+  --bg-tertiary: #111a16;
+  --bg-card: #18181b;
+  --bg-card-header: #27272a;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d8;
+  --text-muted: #9f9fa8;
+  --text-disabled: #7c7c7c;
+  --text-pagination: #bbbbbb;
+  --text-description: #cecece;
+  
+  --border-primary: #27272a;
+  --border-secondary: #2e3033;
+  --border-hover: #bebebe;
+  
+  --accent-primary: #64f196;
+  --accent-secondary: #63ef95;
+  
+  --error-primary: #c33434;
+  --error-shadow: rgba(195, 52, 52, 0.42);
+  --success-shadow: rgba(16, 183, 77, 0.42);
+  
+  --shadow-color: rgba(81, 81, 81, 0.16);
+  --grid-color: #1a1a1a;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --bg-card: #ffffff;
+  --bg-card-header: #f1f3f4;
+  
+  --text-primary: #000000;
+  --text-secondary: #343a40;
+  --text-muted: #6c757d;
+  --text-disabled: #adb5bd;
+  --text-pagination: #495057;
+  --text-description: #212529;
+  
+  --border-primary: #dee2e6;
+  --border-secondary: #ced4da;
+  --border-hover: #495057;
+  
+  --accent-primary: #28a745;
+  --accent-secondary: #20c997;
+  
+  --error-primary: #dc3545;
+  --error-shadow: rgba(220, 53, 69, 0.42);
+  --success-shadow: rgba(40, 167, 69, 0.42);
+  
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --grid-color: #e9ecef;
+}
+
 *{
   box-sizing: border-box;
 }
@@ -9,14 +71,14 @@
 }
 
 body{
-  background-color: #040714;
-  background-color: #000000;
-  color: #fff;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font-family: "League Spartan", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .backImage {
-  background-image: linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+  background-image: linear-gradient(to right, var(--grid-color) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
   background-size: 3.2vw 3.2vw;
   opacity: 1;
 }
@@ -38,8 +100,8 @@ body{
 }
 
 .navlinkContainer .active{
-  border-color: #64f196;
-  color: #64f196;
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
 }
 
 .projectBounce {
@@ -67,10 +129,6 @@ body{
   }
 }
 
-
-
-
-
 .emailShake {
   animation: emailShake 0.4s ease-in-out infinite alternate;
 }
@@ -84,7 +142,6 @@ to{
 }
 
 }
-
 
 .handShake {
   animation: shake 1s ease-in-out infinite alternate;
@@ -101,7 +158,6 @@ to{
     transform: rotate(20deg);
   }
 }
-
 
 .pageAnimation {
   animation: pageAnimation 0.5s ease-in-out forwards;
@@ -122,8 +178,6 @@ to{
   }
 }
 
-
-
 .pageAnimationReverse {
   animation: pageAnimationReverse 0.6s ease-in-out forwards;
   transform-origin: calc(100% - 60px) 20px;
@@ -142,4 +196,17 @@ to{
     opacity: 0.4;
     border-radius: 50%;
   }
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
 }

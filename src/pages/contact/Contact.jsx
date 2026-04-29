@@ -19,6 +19,7 @@ import { FaSkullCrossbones } from "react-icons/fa6";
 import { TiTick } from "react-icons/ti";
 import axios from 'axios'
 import ScrollToTop from '../../components/ScrollToTop'
+import ThemeToggle from "../../components/theme-toggle/ThemeToggle";
 
 
 
@@ -101,10 +102,10 @@ const Contact = () => {
   return (
     <div className="pb-[60px] lg:pb-0 w-full  lg:h-[90%] lg:w-[85%]  lg:rounded-2xl lg:overflow-hidden pageAnimation">
       <ScrollToTop />
-      <div className="header bg-[#111a16] sticky z-[99]  top-0 left-0 lg:static py-5 lg:py-0 lg:h-[14%] gap-3 flex items-center justify-center lg:justify-between px-7 ">
+      <div className="header bg-[var(--bg-tertiary)] sticky z-[99]  top-0 left-0 lg:static py-5 lg:py-0 lg:h-[14%] gap-3 flex items-center justify-center lg:justify-between px-7 ">
         <div className="shrink-0">
-          <div className="flex items-center gap-3 text-[1.2vw] text-[#9f9fa8]">
-            <h3 className="text-[22px] lg:text-[2.4vw] text-[#fff] font-[600] leading-none text-shadow-2xl">
+          <div className="flex items-center gap-3 text-[1.2vw] text-[var(--text-muted)]">
+            <h3 className="text-[22px] lg:text-[2.4vw] text-[var(--text-primary)] font-[600] leading-none text-shadow-2xl">
               Let's Connect 
             </h3>{" "}
             <span className="text-[22px] h-[22px] w-[22px] lg:text-[1.8vw] lg:w-[2.2vw] lg:h-[2.2vw] transition-all duration-300 emailShake">
@@ -113,77 +114,74 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="hidden lg:flex items-center justify-end gap-[3vw] bg-[#111a16] ">
+        <div className="hidden lg:flex items-center justify-end gap-[3vw] bg-[var(--bg-tertiary)] ">
           <dir className="flex items-center w-max justify-end  gap-[1vw] navlinkContainer">
             <NavLink
               to="/"
-              className="text-[1.2vw] text-[#9f9fa8] h-[2.5vw] w-[2.5vw] cursor-pointer bg-[#18181b] flex items-center justify-center  border-[1px] border-[#2e3033] hover:border-[#bebebe] transition-all duration-300   hover:text-white rounded-full "
+              className="text-[1.2vw] text-[var(--text-muted)] h-[2.5vw] w-[2.5vw] cursor-pointer bg-[var(--bg-card)] flex items-center justify-center  border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300   hover:text-[var(--text-primary)] rounded-full "
             >
               <FaUserTie />
             </NavLink>
 
             <NavLink
               to="/projects"
-              className="text-[1.2vw] text-[#9f9fa8] h-[2.5vw] w-[2.5vw]  cursor-pointer bg-[#18181b] flex items-center justify-center  border-[1px] border-[#2e3033] hover:border-[#bebebe] transition-all duration-300   hover:text-white rounded-full "
+              className="text-[1.2vw] text-[var(--text-muted)] h-[2.5vw] w-[2.5vw]  cursor-pointer bg-[var(--bg-card)] flex items-center justify-center  border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300   hover:text-[var(--text-primary)] rounded-full "
             >
               <IoDocumentTextOutline />
             </NavLink>
 
             <NavLink
               to="/contact"
-              className="text-[1.2vw] text-[#9f9fa8] h-[2.5vw] w-[2.5vw]  cursor-pointer bg-[#18181b] flex items-center justify-center  border-[1px] border-[#2e3033] hover:border-[#bebebe] transition-all duration-300  hover:text-white rounded-full "
+              className="text-[1.2vw] text-[var(--text-muted)] h-[2.5vw] w-[2.5vw]  cursor-pointer bg-[var(--bg-card)] flex items-center justify-center  border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300  hover:text-[var(--text-primary)] rounded-full "
             >
               <TiContacts />
             </NavLink>
+
+            <ThemeToggle />
           </dir>
         </div>
       </div>
 
-      <div className="main  bg-[#111111] lg:h-[86%] flex flex-col-reverse lg:flex-row  justify-between gap-7 px-7 py-5">
+      <div className="main  bg-[var(--bg-secondary)] lg:h-[86%] flex flex-col-reverse lg:flex-row  justify-between gap-7 px-7 py-5">
         <div className="lg:w-[40%] h-full  flex flex-col gap-7 rounded-lg lg:px-6 lg:py-4 w-full">
-           <p className="text-[17px] lg:text-[1.6vw] text-[#d4d4d8] flex items-center gap-1.5">Social Links <IoShareSocial className="mb-[0.4vw]"/></p>
+           <p className="text-[17px] lg:text-[1.6vw] text-[var(--text-secondary)] flex items-center gap-1.5">Social Links <IoShareSocial className="mb-[0.4vw]"/></p>
 
            <div className="flex flex-col gap-4">
-              <Link to='https://wa.me/+918090674352' target="_blank" className="w-full border border-[#272928] rounded-lg hover:border-[#10b98140] focus:border-[#10b98140] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#9e9e9e] flex items-center justify-between transition-all duration-300 hover:text-[#10b74d] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><FaWhatsapp  className="mb-[0.3vw]"/> +91 8090674352</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></Link>
-              <a href='mailto:anuragkumarsingh154@gmail.com' className="w-full border border-[#272928] rounded-lg hover:border-[#10b98140] focus:border-[#10b98140] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#9e9e9e] flex items-center justify-between transition-all duration-300 hover:text-[#10b74d] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><MdEmail  className="mb-[0.3vw]"/> anuragkumarsingh154@gmail.com</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></a>
-              <Link to='https://www.linkedin.com/in/anurag-singh-lucknow/' target="_blank" className="w-full border border-[#272928] rounded-lg hover:border-[#10b98140] focus:border-[#10b98140] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#9e9e9e] flex items-center justify-between transition-all duration-300 hover:text-[#10b74d] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><FaLinkedin   className="mb-[0.3vw]"/> in/anurag-singh-lucknow</span>  <FaExternalLinkAlt className="mb-[0.3vw]" /></Link>
-              <Link to='https://github.com/AnuragSingh8090' target="_blank" className="w-full border border-[#272928] rounded-lg hover:border-[#10b98140] focus:border-[#10b98140] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#9e9e9e] flex items-center justify-between transition-all duration-300 hover:text-[#10b74d] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><FaGithub  className="mb-[0.3vw]"/> github.com/AnuragSingh8090</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></Link>
-              <Link to='https://www.instagram.com/01_anurag_10' target="_blank" className="w-full border border-[#272928] rounded-lg hover:border-[#10b98140] focus:border-[#10b98140] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#9e9e9e] flex items-center justify-between transition-all duration-300 hover:text-[#10b74d] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><GrInstagram className="mb-[0.3vw]"/> instagram.com/01_anurag_10</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></Link>
-              {/* <Link to='https://x.com/narendramodi' target="_blank" className="w-full border border-[#272928] rounded-lg hover:border-[#10b98140] focus:border-[#10b98140] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#9e9e9e] flex items-center justify-between transition-all duration-300 hover:text-[#10b74d] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><BsTwitterX  className="mb-[0.3vw]"/> x.com/narendramodi</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></Link> */}
-              {/* <Link to='https://discord.com/invite/programming' target="_blank" className="w-full border border-[#272928] rounded-lg hover:border-[#10b98140] focus:border-[#10b98140] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#9e9e9e] flex items-center justify-between transition-all duration-300 hover:text-[#10b74d] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><FaDiscord  className="mb-[0.3vw]"/> discord.com/programming</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></Link> */}
+              <Link to='https://wa.me/+918090674352' target="_blank" className="w-full border border-[var(--border-primary)] rounded-lg hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[var(--bg-card)] text-[var(--text-muted)] flex items-center justify-between transition-all duration-300 hover:text-[var(--accent-primary)] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><FaWhatsapp  className="mb-[0.3vw]"/> +91 8090674352</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></Link>
+              <a href='mailto:anuragkumarsingh154@gmail.com' className="w-full border border-[var(--border-primary)] rounded-lg hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[var(--bg-card)] text-[var(--text-muted)] flex items-center justify-between transition-all duration-300 hover:text-[var(--accent-primary)] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><MdEmail  className="mb-[0.3vw]"/> anuragkumarsingh154@gmail.com</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></a>
+              <Link to='https://www.linkedin.com/in/anurag-singh-lucknow/' target="_blank" className="w-full border border-[var(--border-primary)] rounded-lg hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[var(--bg-card)] text-[var(--text-muted)] flex items-center justify-between transition-all duration-300 hover:text-[var(--accent-primary)] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><FaLinkedin   className="mb-[0.3vw]"/> in/anurag-singh-lucknow</span>  <FaExternalLinkAlt className="mb-[0.3vw]" /></Link>
+              <Link to='https://github.com/AnuragSingh8090' target="_blank" className="w-full border border-[var(--border-primary)] rounded-lg hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[var(--bg-card)] text-[var(--text-muted)] flex items-center justify-between transition-all duration-300 hover:text-[var(--accent-primary)] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><FaGithub  className="mb-[0.3vw]"/> github.com/AnuragSingh8090</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></Link>
+              <Link to='https://www.instagram.com/01_anurag_10' target="_blank" className="w-full border border-[var(--border-primary)] rounded-lg hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)] px-3 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[var(--bg-card)] text-[var(--text-muted)] flex items-center justify-between transition-all duration-300 hover:text-[var(--accent-primary)] cursor-pointer line-clamp-1"> <span className="flex items-center gap-2 lg:gap-[0.7vw]"><GrInstagram className="mb-[0.3vw]"/> instagram.com/01_anurag_10</span>  <FaExternalLinkAlt className="mb-[0.3vw]"/></Link>
            </div>
-
         </div>
 
-        <div className=" w-full lg:w-[60%] h-full border-[1px] border-[#1d2221] px-4 lg:px-6 py-4 gap-6 flex flex-col rounded-lg bg-[#111716]">
-           <p className="text-[17px] lg:text-[1.6vw] text-[#d4d4d8] flex items-center gap-3">Let's Discuss Your Project <TiMessages className="mb-[0.4vw]"/></p>
+        <div className=" w-full lg:w-[60%] h-full border-[1px] border-[var(--border-primary)] px-4 lg:px-6 py-4 gap-6 flex flex-col rounded-lg bg-[var(--bg-card)]">
+           <p className="text-[17px] lg:text-[1.6vw] text-[var(--text-secondary)] flex items-center gap-3">Let's Discuss Your Project <TiMessages className="mb-[0.4vw]"/></p>
            <form action="" className="flex flex-col gap-6 lg:gap-8 justify-between h-full " onSubmit={handleSubmit}>
               <div className="w-full shrink-0 relative ">
-                <input type="text" placeholder="Your Name *" onChange={(elem)=>{ setMessage({...message, name : elem.target.value}); elem.target.value ? setNameErr(false) : setNameErr(true)}} value={message.name} className={`w-full  border rounded-md lg:rounded-lg  ${nameErr? ' border-[#c33434] focus:border-[#c33434] hover:border-[#c33434]' : ' border-[#272928] hover:border-[#10b98140] focus:border-[#10b98140]'} transition-all duration-300 outline-none px-2 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#d4d4d8] placeholder:text-[#9e9e9e]`}/>
-                {nameErr?(<p className="text-[#c33434] text-[13px] lg:text-[1.1vw] absolute bottom-[-22px] left-[0.3vw]">Name is required</p>) :''}  
+                <input type="text" placeholder="Your Name *" onChange={(elem)=>{ setMessage({...message, name : elem.target.value}); elem.target.value ? setNameErr(false) : setNameErr(true)}} value={message.name} className={`w-full  border rounded-md lg:rounded-lg  ${nameErr? ' border-[var(--error-primary)] focus:border-[var(--error-primary)] hover:border-[var(--error-primary)]' : ' border-[var(--border-primary)] hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)]'} transition-all duration-300 outline-none px-2 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[var(--bg-card-header)] text-[var(--text-secondary)] placeholder:text-[var(--text-muted)]`}/>
+                {nameErr?(<p className="text-[var(--error-primary)] text-[13px] lg:text-[1.1vw] absolute bottom-[-22px] left-[0.3vw]">Name is required</p>) :''}  
               </div>
               
               <div className="w-full shrink-0 relative ">
-                <input type="email" placeholder="Your Email *" onChange={(elem)=>{ setMessage({...message, email : elem.target.value}); elem.target.value ? setEmailErr(false) : setEmailErr(true)}} value={message.email}  className={`w-full  border rounded-md lg:rounded-lg   ${emailErr? ' border-[#c33434] focus:border-[#c33434] hover:border-[#c33434]' : ' border-[#272928] hover:border-[#10b98140] focus:border-[#10b98140]'} transition-all duration-300 outline-none px-2 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#d4d4d8] placeholder:text-[#9e9e9e]`} />
-                {emailErr?(<p className="text-[#c33434] text-[13px] lg:text-[1.1vw] absolute bottom-[-22px] left-[0.3vw]">Email is required</p>) :''}
+                <input type="email" placeholder="Your Email *" onChange={(elem)=>{ setMessage({...message, email : elem.target.value}); elem.target.value ? setEmailErr(false) : setEmailErr(true)}} value={message.email}  className={`w-full  border rounded-md lg:rounded-lg   ${emailErr? ' border-[var(--error-primary)] focus:border-[var(--error-primary)] hover:border-[var(--error-primary)]' : ' border-[var(--border-primary)] hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)]'} transition-all duration-300 outline-none px-2 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[var(--bg-card-header)] text-[var(--text-secondary)] placeholder:text-[var(--text-muted)]`} />
+                {emailErr?(<p className="text-[var(--error-primary)] text-[13px] lg:text-[1.1vw] absolute bottom-[-22px] left-[0.3vw]">Email is required</p>) :''}
               </div>
 
               <div className="w-full h-full relative">
-                <textarea name="your-message" placeholder="Your Message *" onChange={(elem)=>{setMessage({...message, message : elem.target.value}); elem.target.value ? setMessageErr(false) : setMessageErr(true)}} value={message.message}  className={`w-full min-h-[140px] lg:h-full resize-none  border  rounded-md lg:rounded-lg ${messageErr? ' border-[#c33434] focus:border-[#c33434] hover:border-[#c33434]' : ' border-[#272928] hover:border-[#10b98140] focus:border-[#10b98140]'} transition-all duration-300 outline-none px-2 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[#1e2020] text-[#d4d4d8] placeholder:text-[#9e9e9e]`}></textarea>
-                {messageErr?(<p className="text-[#c33434] text-[13px] lg:text-[1.1vw] absolute bottom-[-22px] left-[0.3vw]">Message is required</p>) :''}
+                <textarea name="your-message" placeholder="Your Message *" onChange={(elem)=>{setMessage({...message, message : elem.target.value}); elem.target.value ? setMessageErr(false) : setMessageErr(true)}} value={message.message}  className={`w-full min-h-[140px] lg:h-full resize-none  border  rounded-md lg:rounded-lg ${messageErr? ' border-[var(--error-primary)] focus:border-[var(--error-primary)] hover:border-[var(--error-primary)]' : ' border-[var(--border-primary)] hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)]'} transition-all duration-300 outline-none px-2 lg:px-[1vw] py-2 lg:py-[0.7vw] text-[15px] lg:text-[1.2vw] bg-[var(--bg-card-header)] text-[var(--text-secondary)] placeholder:text-[var(--text-muted)]`}></textarea>
+                {messageErr?(<p className="text-[var(--error-primary)] text-[13px] lg:text-[1.1vw] absolute bottom-[-22px] left-[0.3vw]">Message is required</p>) :''}
               </div>
-              <button  className={`${loading ? 'pointer-events-none cursor-default' : 'pointer-events-auto' } ${messageState === 'failed' ? 'border-[#c33434] text-[#c33434] hover:border-[#c33434] focus:border-[#c33434] hover:text-[#c33434]' : ''} ${messageState === 'success' ? 'pointer-events-none cursor-default border-[#10b74d] hover:border-[#10b74d] focus:border-[#10b74d] hover:text-[#10b74d] text-[#10b74d]' : ''} ${messageState === 'idle' ? 'border-[#272928] hover:border-[#10b74d] focus:border-[#10b74d] hover:text-[#10b74d] text-[#d4d4d8]' : ''} ${!message.name || !message.email || !message.message  ? 'disabled' : ''}  select-none relative w-max px-3 lg:px-[1vw] py-2 lg:py-[1vw] overflow-hidden border rounded-lg    outline-none  transition-all duration-300 bg-[#1e2020] cursor-pointer`}>
+              <button  className={`${loading ? 'pointer-events-none cursor-default' : 'pointer-events-auto' } ${messageState === 'failed' ? 'border-[var(--error-primary)] text-[var(--error-primary)] hover:border-[var(--error-primary)] focus:border-[var(--error-primary)] hover:text-[var(--error-primary)]' : ''} ${messageState === 'success' ? 'pointer-events-none cursor-default border-[var(--accent-primary)] hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)] hover:text-[var(--accent-primary)] text-[var(--accent-primary)]' : ''} ${messageState === 'idle' ? 'border-[var(--border-primary)] hover:border-[var(--accent-primary)] focus:border-[var(--accent-primary)] hover:text-[var(--accent-primary)] text-[var(--text-secondary)]' : ''} ${!message.name || !message.email || !message.message  ? 'disabled' : ''}  select-none relative w-max px-3 lg:px-[1vw] py-2 lg:py-[1vw] overflow-hidden border rounded-lg    outline-none  transition-all duration-300 bg-[var(--bg-card-header)] cursor-pointer`}>
                  <div className="p-0 h-full min-w-[120px] lg:min-w-[10vw] text-[16px] lg:text-[1.2vw] z-[3]  flex items-center justify-center gap-[0.5vw] cursor-pointer">
                   {
                    !loading ? buttonMgs : <span className="flex items-center gap-2 lg:gap-[0.5vw]">Sending  <FaSpinner className="animate-spin text-[16px] lg:text-[1.2vw]" /> </span>   
                   }
-                 
                  </div>
-                 <div className={`absolute h-full  top-0 left-[-45%] shadowAnimation  ${messageState === 'failed' ? 'shadow-[0px_0px_20px_30px_rgba(195,52,52,0.42)]' : 'shadow-[0px_0px_20px_30px_rgba(16,183,77,0.42)]'}`}></div>
+                 <div className={`absolute h-full  top-0 left-[-45%] shadowAnimation  ${messageState === 'failed' ? 'shadow-[0px_0px_20px_30px_var(--error-shadow)]' : 'shadow-[0px_0px_20px_30px_var(--success-shadow)]'}`}></div>
               </button>
            </form>
         </div>
-
       </div>
     </div>
   );

@@ -43,7 +43,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #b0b0b0;
+  background-color: var(--border-hover);
   opacity: 1;
   transition: all 0.5s ease-in-out;
 }
@@ -56,17 +56,17 @@
 }
 
 .rotate-box {
-  box-shadow: 0px -2vw 1vw 0.6vw rgb(255, 255, 255);
+  box-shadow: 0px -2vw 1vw 0.6vw var(--text-primary);
   
   animation: rotation 5s linear  infinite;
 }
 .rotate-box2 {
-  box-shadow: -1px -4vw 1vw 2vw rgb(197, 197, 197);
+  box-shadow: -1px -4vw 1vw 2vw var(--text-secondary);
   
   animation: rotation 5s linear  infinite;
 }
 .rotate-box3 {
-  box-shadow: -1px -4vw 1vw 2vw #63ef95;
+  box-shadow: -1px -4vw 1vw 2vw var(--accent-secondary);
   
   animation: rotation 5s linear  infinite;
 }
