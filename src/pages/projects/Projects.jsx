@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FaUserTie } from "react-icons/fa6";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { TiContacts } from "react-icons/ti";
+import { MdWorkOutline } from "react-icons/md";
 import { HiOutlineDocumentText } from "react-icons/hi2";
 import { TiArrowRight } from "react-icons/ti";
 import { TiArrowLeft } from "react-icons/ti";
@@ -69,6 +70,13 @@ const Projects = () => {
             </NavLink>
 
             <NavLink
+              to="/experience"
+              className="text-[1.3vw]  text-[var(--text-muted)] h-[2.5vw] w-[2.5vw] cursor-pointer bg-[var(--bg-card)] flex items-center justify-center  border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300   hover:text-[var(--text-primary)] rounded-full "
+            >
+              <MdWorkOutline />
+            </NavLink>
+
+            <NavLink
               to="/contact"
               className="text-[1.3vw]  text-[var(--text-muted)] h-[2.5vw] w-[2.5vw] cursor-pointer bg-[var(--bg-card)] flex items-center justify-center  border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300  hover:text-[var(--text-primary)] rounded-full "
             >
@@ -81,7 +89,7 @@ const Projects = () => {
       </div>
 
       <div className="main  bg-[var(--bg-secondary)] lg:h-[86%] flex flex-col  justify-between gap-7 px-7 py-5">
-        <div className="h-max max-h-full w-full  flex flex-wrap justify-between gap-5 lg:gap-8 ">
+        <div className="h-max max-h-full w-full grid grid-cols-1 sm:grid-cols-3 gap-5 lg:gap-8">
           {paginationData.currentProjects.map((project, index) => {
             if (project.type === 'vlog') {
               return <Vlog_card key={project.id} data={project} />;

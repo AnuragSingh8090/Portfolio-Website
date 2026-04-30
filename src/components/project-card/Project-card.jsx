@@ -6,7 +6,7 @@ import { TiArrowRight } from "react-icons/ti";
 
 export const Vlog_card = () => {
     return (
-        <div className={`h-[210px] w-full md:w-[48%] lg:h-[30vh] lg:w-[31%] border border-[var(--border-primary)] flex flex-col shadow-white-light rounded-lg bg-[var(--bg-card)] scaleup-animation overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[101%] hover:border-[var(--accent-primary)] group`}>
+        <div className={`h-[210px] w-full lg:h-[30vh] border border-[var(--border-primary)] flex flex-col shadow-white-light rounded-lg bg-[var(--bg-card)] scaleup-animation overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[101%] hover:border-[var(--accent-primary)] group`}>
             <div className="header w-full h-[17%]  bg-[var(--bg-card-header)] px-[3%] py-[1%] flex items-center justify-between text-[var(--text-secondary)] text-[18px] lg:text-[1.25vw]">
                 <div className='flex items-center gap-2 lg:gap-[0.6vw] w-[70%] group-hover:text-[var(--accent-primary)]'><FaGithub className=' mb-[0.2vw]' /><p className='line-clamp-1'>E-Commerce Website</p>  <FaExternalLinkAlt className=' mb-[0.2vw] text-[12px] lg:text-[1vw]' /></div>
                 <div className=' text-[var(--text-disabled)] text-[14px] lg:text-[1vw] flex items-center justify-center'>12-04-2025</div>
@@ -42,7 +42,7 @@ export const Project_card = ({data}) => {
     };
 
     return (
-        <div className={`h-[210px] w-full md:w-[48%] lg:h-[30vh] lg:w-[31%] border border-[var(--border-primary)] flex flex-col shadow-white-light rounded-lg bg-[var(--bg-card)] scaleup-animation overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[101%] hover:border-[var(--accent-primary)] group`}>
+        <div className={`h-[210px] w-full lg:h-[30vh] border border-[var(--border-primary)] flex flex-col shadow-white-light rounded-lg bg-[var(--bg-card)] scaleup-animation overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[101%] hover:border-[var(--accent-primary)] group`}>
             <div className="header w-full h-[17%]  bg-[var(--bg-card-header)] px-[3%] py-[1%] flex items-center justify-between text-[var(--text-secondary)] text-[18px] lg:text-[1.25vw]">
                 <div 
                     className='flex items-center gap-2 lg:gap-[0.6vw] w-[70%] group-hover:text-[var(--accent-primary)] cursor-pointer'

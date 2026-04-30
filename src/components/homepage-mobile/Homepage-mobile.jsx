@@ -30,16 +30,24 @@ const Homepage_mobile = () => {
                 </div>
 
                 <div className="py-2 grow-1 flex flex-col gap-1 justify-between">
-                    <p className="text-[14px] sm:text-[18px] leading-[28px] text-[var(--text-muted)]">
-                        Hi, I am 
-                        <span className="text-[var(--text-primary)] text-[28px] sm:text-[35px] mx-2 font-[500]">
-                            {personal.mobileDisplayName}
-                        </span> 
-                        <span className="text-[20px] sm:text-[25px] inline-flex handShake">👋</span>
-                    </p>
-                    <p className="text-[14px] sm:text-[18px] leading-[18px] text-[var(--text-muted)]">
-                        {intro.mobile} <span className="text-[var(--accent-primary)]">{personal.company}</span>
-                    </p>
+                    <div className="flex flex-col gap-1">
+                        <p className="text-[14px] sm:text-[18px] leading-[28px] text-[var(--text-muted)]">
+                            Hi, I am 
+                            <span className="text-[var(--text-primary)] text-[28px] sm:text-[35px] mx-2 font-[500]">
+                                {personal.mobileDisplayName}
+                            </span> 
+                            <span className="text-[20px] sm:text-[25px] inline-flex handShake">👋</span>
+                        </p>
+                        <div className="flex items-center gap-2">
+                            <p className="text-[14px] sm:text-[18px] leading-[18px] text-[var(--text-muted)]">
+                                {intro.mobile} <span className="text-[var(--accent-primary)]">{personal.company}</span>
+                            </p>
+                            <a href={resume.filename} download className="flex items-center gap-1 text-[12px] sm:text-[14px] text-[var(--text-disabled)] hover:text-[var(--text-secondary)] bg-[var(--bg-card)] border-[1px] border-[var(--border-secondary)] cursor-pointer transition-all duration-300 hover:border-[var(--border-hover)] rounded-full px-2 py-1">
+                                <LiaFileDownloadSolid className="text-[14px]"/>
+                                {resume.text}
+                            </a>
+                        </div>
+                    </div>
                     
                     <Link to='/contact' className="h-[15%] sm:h-[20%] relative w-full overflow-hidden bg-[var(--bg-card)] border-[1px] border-[var(--border-primary)] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300">
                         <p className="text-[10.5px] sm:text-[16px] text-[var(--text-secondary)] font-[400] text-center p-2 uppercase h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg bg-[var(--bg-card)] z-3 flex items-center justify-center">
@@ -49,16 +57,6 @@ const Homepage_mobile = () => {
                             <div className="w-[2vw] h-[10%] absolute top-[50%] translate-y-[-50%] left-2 rotate-box2"></div>
                         </div>
                     </Link>
-
-                    <a href={resume.filename} download className="h-[15%] sm:h-[20%] relative w-full overflow-hidden bg-[var(--bg-card)] border-[1px] border-[var(--border-primary)] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300">
-                        <p className="text-[10.5px] sm:text-[16px] text-[var(--accent-secondary)] font-[400] text-center p-2 uppercase h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg bg-[var(--bg-card)] z-3 flex gap-1 items-center justify-center">
-                            <LiaFileDownloadSolid className="mb-1 text-[14px]" />
-                            {resume.text}
-                        </p>
-                        <div className="w-[calc(100%-30px)] h-[10%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-                            <div className="w-[2vw] h-[10%] absolute top-[50%] translate-y-[-50%] left-2 rotate-box3"></div>
-                        </div>
-                    </a>
                 </div>
             </div>
 

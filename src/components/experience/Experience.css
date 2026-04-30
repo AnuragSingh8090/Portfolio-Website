@@ -1,0 +1,45 @@
+/* Experience component specific styles */
+
+/* Smooth horizontal scrolling for experience highlights */
+.experience-highlights {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.experience-highlights::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+/* Hover animation for experience cards */
+.experience-highlight-card {
+  transition: all 0.3s ease;
+}
+
+.experience-highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* Pulse animation for icons */
+.experience-icon {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience-highlights {
+    gap: 0.5rem;
+  }
+}

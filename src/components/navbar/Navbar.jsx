@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 import { FaUserTie } from "react-icons/fa6";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { TiContacts } from "react-icons/ti";
+import { MdWorkOutline } from "react-icons/md";
 import ThemeToggle from "../theme-toggle/ThemeToggle";
 
 const Navbar = ()=>{
@@ -20,6 +21,13 @@ const Navbar = ()=>{
               className="text-[20px] h-[38px] w-[38px] text-[var(--text-muted)]   cursor-pointer bg-[var(--bg-card)] flex items-center justify-center  border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300   hover:text-[var(--text-primary)] rounded-full "
             >
               <IoDocumentTextOutline />
+            </NavLink>
+
+            <NavLink
+              to="/experience"
+              className="text-[20px] h-[38px] w-[38px] text-[var(--text-muted)]   cursor-pointer bg-[var(--bg-card)] flex items-center justify-center  border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300   hover:text-[var(--text-primary)] rounded-full "
+            >
+              <MdWorkOutline />
             </NavLink>
 
             <NavLink

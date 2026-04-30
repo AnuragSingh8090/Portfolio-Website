@@ -3,6 +3,7 @@ import { NavLink,Link,useNavigate } from "react-router-dom";
 import { FaUserTie } from "react-icons/fa6";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { TiContacts } from "react-icons/ti";
+import { MdWorkOutline } from "react-icons/md";
 import { TiMessages } from "react-icons/ti";
 import { IoSend } from "react-icons/io5";
 import { IoShareSocial } from "react-icons/io5";
@@ -128,6 +129,13 @@ const Contact = () => {
               className="text-[1.2vw] text-[var(--text-muted)] h-[2.5vw] w-[2.5vw]  cursor-pointer bg-[var(--bg-card)] flex items-center justify-center  border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300   hover:text-[var(--text-primary)] rounded-full "
             >
               <IoDocumentTextOutline />
+            </NavLink>
+
+            <NavLink
+              to="/experience"
+              className="text-[1.2vw] text-[var(--text-muted)] h-[2.5vw] w-[2.5vw]  cursor-pointer bg-[var(--bg-card)] flex items-center justify-center  border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300   hover:text-[var(--text-primary)] rounded-full "
+            >
+              <MdWorkOutline />
             </NavLink>
 
             <NavLink

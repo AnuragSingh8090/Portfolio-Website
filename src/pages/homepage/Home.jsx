@@ -4,6 +4,7 @@ import Skills from "../../components/skills/Skills";
 import { FaUserTie } from "react-icons/fa6";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { TiContacts } from "react-icons/ti";
+import { MdWorkOutline } from "react-icons/md";
 import { LiaFileDownloadSolid } from "react-icons/lia";
 import Homepage_mobile from "../../components/homepage-mobile/Homepage-mobile";
 import { useResponsive } from "../../hooks/useResponsive";
@@ -32,6 +33,10 @@ const Home = () => {
             <span className="text-[1.8vw] transition-all duration-300 handShake">
               👋
             </span>
+            <a href={resume.filename} download className="flex items-center whitespace-nowrap gap-[0.3vw] text-[1vw] text-[var(--text-disabled)] hover:text-[var(--text-secondary)] bg-[var(--bg-card)] border-[1px] border-[var(--border-secondary)] cursor-pointer transition-all duration-300 hover:border-[var(--border-hover)] rounded-3xl px-[0.6vw] py-[0.3vw] ml-[1vw]">
+              <LiaFileDownloadSolid className="mb-[0.1vw]"/>
+              {resume.text}
+            </a>
           </div>
           <p className="text-[1.2vw] mt-2 text-[var(--text-muted)]">
             {intro.desktop} <span className="text-[var(--accent-primary)]">{personal.company}</span>
@@ -39,11 +44,6 @@ const Home = () => {
         </div>
         
         <div className="flex items-center gap-[3vw]">
-          <a href={resume.filename} download className="flex items-center whitespace-nowrap gap-[0.3vw] text-[1.2vw] text-[var(--text-disabled)] hover:text-[var(--text-secondary)] bg-[var(--bg-card)] border-[1px] border-[var(--border-secondary)] cursor-pointer transition-all duration-300 hover:border-[var(--border-hover)] rounded-3xl px-[0.8vw] py-[0.4vw]">
-            <LiaFileDownloadSolid className="mb-[0.2vw]"/>
-            {resume.text}
-          </a>
-
           <dir className="hidden lg:flex items-center justify-end gap-[1vw] navlinkContainer">
             <NavLink to="/" className="text-[1.2vw] text-[var(--text-muted)] h-[2.5vw] w-[2.5vw] cursor-pointer bg-[var(--bg-card)] flex items-center justify-center border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300 hover:text-[var(--text-primary)] rounded-full">
               <FaUserTie />
@@ -51,6 +51,10 @@ const Home = () => {
 
             <NavLink to="/projects" className="text-[1.3vw] text-[var(--text-muted)] h-[2.5vw] w-[2.5vw] cursor-pointer bg-[var(--bg-card)] flex items-center justify-center border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300 hover:text-[var(--text-primary)] rounded-full">
               <IoDocumentTextOutline />
+            </NavLink>
+
+            <NavLink to="/experience" className="text-[1.3vw] text-[var(--text-muted)] h-[2.5vw] w-[2.5vw] cursor-pointer bg-[var(--bg-card)] flex items-center justify-center border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300 hover:text-[var(--text-primary)] rounded-full">
+              <MdWorkOutline />
             </NavLink>
 
             <NavLink to="/contact" className="text-[1.3vw] text-[var(--text-muted)] h-[2.5vw] w-[2.5vw] cursor-pointer bg-[var(--bg-card)] flex items-center justify-center border-[1px] border-[var(--border-secondary)] hover:border-[var(--border-hover)] transition-all duration-300 hover:text-[var(--text-primary)] rounded-full">

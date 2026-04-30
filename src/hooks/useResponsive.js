@@ -17,8 +17,8 @@ export const useResponsive = () => {
       
       setWindowSize({ width, height });
       
-      // Define breakpoints (matching Tailwind CSS defaults)
-      setIsMobile(width < 768);
+      // Define breakpoints (matching 1024px for consistency)
+      setIsMobile(width < 1024);
       setIsTablet(width >= 768 && width < 1024);
       setIsDesktop(width >= 1024);
     };

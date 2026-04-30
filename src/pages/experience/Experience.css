@@ -1,0 +1,95 @@
+/* Experience page specific styles */
+
+/* Smooth scrolling for the main content area */
+.main {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.main::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+/* Hide scrollbar for skills section */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+/* Timeline animation */
+.experience-timeline {
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-primary);
+}
+
+/* Hover effects for experience cards */
+.experience-card {
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+/* Skills progression animation */
+.skills-level {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.skills-level:nth-child(1) { animation-delay: 0.1s; }
+.skills-level:nth-child(2) { animation-delay: 0.2s; }
+.skills-level:nth-child(3) { animation-delay: 0.3s; }
+.skills-level:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Highlight cards animation */
+.highlight-card {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.highlight-card:nth-child(1) { animation-delay: 0.1s; }
+.highlight-card:nth-child(2) { animation-delay: 0.2s; }
+.highlight-card:nth-child(3) { animation-delay: 0.3s; }
+.highlight-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience-timeline::before {
+    left: 10px;
+  }
+}
