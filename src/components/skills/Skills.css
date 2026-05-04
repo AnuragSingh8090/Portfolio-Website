@@ -1,7 +1,7 @@
 
 
 .slidingAnimation {
-    animation: firstItem 17s linear infinite;
+    animation: firstItem 20s linear infinite;
     animation-play-state: running;
   }
 .slidingAnimation:hover {
@@ -10,5 +10,5 @@
   
   @keyframes firstItem {
     0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%) }
+    100% { transform: translateX(-33.333333%) }
   }
