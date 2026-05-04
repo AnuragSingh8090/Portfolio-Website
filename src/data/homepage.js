@@ -63,13 +63,13 @@ export const homepageData = {
     return: "Innovating with Code"
   },
 
-  footer: {
-    text: "P.S. I'm not really",
-    batman: "Batman",
-    butText: ", but I might be the",
-    hero: "hero", 
-    endText: "your project needs! 🦸‍♂️"
-  },
+footer: {
+  text: "P.S. I'm not exactly",
+  batman: "Superman",
+  butText: ", though I could be the",
+  hero: "developer",
+  endText: "your project has been waiting for! 🚀"
+},
 
   resume: {
     filename: "/Anurag-resume.pdf",

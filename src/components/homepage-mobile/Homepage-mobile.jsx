@@ -42,10 +42,7 @@ const Homepage_mobile = () => {
                             <p className="text-[14px] sm:text-[18px] leading-[18px] text-[var(--text-muted)]">
                                 {intro.mobile} <span className="text-[var(--accent-primary)]">{personal.company}</span>
                             </p>
-                            <a href={resume.filename} download className="flex items-center gap-1 text-[12px] sm:text-[14px] text-[var(--text-disabled)] hover:text-[var(--text-secondary)] bg-[var(--bg-card)] border-[1px] border-[var(--border-secondary)] cursor-pointer transition-all duration-300 hover:border-[var(--border-hover)] rounded-full px-2 py-1">
-                                <LiaFileDownloadSolid className="text-[14px]"/>
-                                {resume.text}
-                            </a>
+
                         </div>
                     </div>
                     
@@ -57,6 +54,16 @@ const Homepage_mobile = () => {
                             <div className="w-[2vw] h-[10%] absolute top-[50%] translate-y-[-50%] left-2 rotate-box2"></div>
                         </div>
                     </Link>
+                    
+                    <a href={resume.filename} download className="h-[15%] sm:h-[20%] relative w-full overflow-hidden bg-[var(--bg-card)] border-[1px] border-[var(--border-primary)] rounded-lg shrink-0 cursor-pointer flex items-center justify-center hover:scale-[101%] transition-all duration-300">
+                        <p className="text-[10.5px] sm:text-[16px] text-[var(--text-secondary)] font-[400] text-center p-2 uppercase h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-lg bg-[var(--bg-card)] z-3 flex items-center justify-center gap-1">
+                            <LiaFileDownloadSolid className="text-[14px] sm:text-[18px]"/>
+                            {resume.text}
+                        </p>
+                        <div className="w-[calc(100%-30px)] h-[10%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                            <div className="w-[2vw] h-[10%] absolute top-[50%] translate-y-[-50%] left-2 rotate-box2"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -123,7 +130,7 @@ const Homepage_mobile = () => {
 
             <section className="mb-3 w-full bg-[var(--bg-card)] px-3 py-2 flex flex-col border-[1px] gap-3 border-[var(--border-primary)] rounded-lg">
                 <p className="text-[var(--accent-secondary)] text-[18px] flex gap-2">
-                    <span>root/admin/amit_yadav.js</span> 
+                    <span>root/admin/anurag_singh.js</span> 
                     <span className="mt-[2px] inline-block">{'%>'}</span>
                 </p>
 
